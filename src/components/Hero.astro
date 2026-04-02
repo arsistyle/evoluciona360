@@ -1,14 +1,14 @@
 ---
-import { useTranslations } from '../i18n/ui';
+import { useTranslations } from "../i18n/ui";
 import Icon from "./Icon.astro";
 
 interface Props {
-  lang: 'es' | 'en';
+  lang: "es" | "en";
 }
 
 const { lang } = Astro.props;
 const t = useTranslations(lang);
-const basePath = lang === 'es' ? '' : `/${lang}`;
+const basePath = lang === "es" ? "" : `/${lang}`;
 ---
 
 <header class="relative min-h-screen flex items-center overflow-hidden pt-20">
@@ -64,7 +64,7 @@ const basePath = lang === 'es' ? '' : `/${lang}`;
         class="text-5xl md:text-7xl lg:text-8xl font-extrabold tracking-tight mb-6 animate-fade-in-up animate-delay-100"
       >
         <span class="text-neutral-900 dark:text-white"
-          >{t.hero.title}</span
+          >{t.hero.title.replace("360", "")}</span
         ><span class="text-[#61b119]">360</span>
       </h1>
 
@@ -104,16 +104,20 @@ const basePath = lang === 'es' ? '' : `/${lang}`;
       <div>
         <div class="text-4xl md:text-8xl font-bold text-[#61b119]">8</div>
         <div class="text-neutral-700 dark:text-white mt-1">
-          {lang === 'es' ? 'Módulos Integrales' : 'Integral Modules'}
+          {lang === "es" ? "Módulos Integrales" : "Integral Modules"}
         </div>
       </div>
       <div>
         <div class="text-4xl md:text-8xl font-bold text-[#004d91]">100%</div>
-        <div class="text-neutral-700 dark:text-white mt-1">{t.hero.stats.auditable}</div>
+        <div class="text-neutral-700 dark:text-white mt-1">
+          {t.hero.stats.auditable}
+        </div>
       </div>
       <div>
         <div class="text-4xl md:text-8xl font-bold text-[#f89c1d]">0</div>
-        <div class="text-neutral-700 dark:text-white mt-1">{t.hero.stats.burocracia}</div>
+        <div class="text-neutral-700 dark:text-white mt-1">
+          {t.hero.stats.burocracia}
+        </div>
       </div>
       <div>
         <div
@@ -121,7 +125,9 @@ const basePath = lang === 'es' ? '' : `/${lang}`;
         >
           360°
         </div>
-        <div class="text-neutral-700 dark:text-white mt-1">{t.hero.stats.cobertura}</div>
+        <div class="text-neutral-700 dark:text-white mt-1">
+          {t.hero.stats.cobertura}
+        </div>
       </div>
     </div>
   </div>
