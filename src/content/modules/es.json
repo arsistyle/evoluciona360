@@ -1,0 +1,50 @@
+[
+  {
+    "number": "01",
+    "title": "Carpeta de Arranque de Contrato",
+    "objective": "Asegurar un inicio de operaciones controlado y alineado al contrato",
+    "deliverable": "Matriz de obligaciones, riesgos y plan de trabajo inicial"
+  },
+  {
+    "number": "02",
+    "title": "Implementación y Estandarización",
+    "objective": "Reducir la variabilidad operacional y la dependencia de personas",
+    "deliverable": "Mapa de procesos, procedimientos POE e instructivos estandarizados"
+  },
+  {
+    "number": "03",
+    "title": "Evaluación y Gestión de Proveedores",
+    "objective": "Asegurar que proveedores críticos cumplan requisitos técnicos, legales y HSE",
+    "deliverable": "Ranking de criticidad e informes de evaluación auditable"
+  },
+  {
+    "number": "04",
+    "title": "Sistemas de Gestión ISO (Enfoque Operacional)",
+    "objective": "Fortalecer sistemas ISO 9001, 45001 y 14001 sin burocracia",
+    "deliverable": "Matriz de brechas y evidencia para auditoría externa"
+  },
+  {
+    "number": "05",
+    "title": "Prevención de Riesgos Integrada",
+    "objective": "Pasar de una prevención documental a una aplicada en terreno",
+    "deliverable": "Sistema preventivo operativo con indicadores HSE claros"
+  },
+  {
+    "number": "06",
+    "title": "Gestión de RRHH en Faena",
+    "objective": "Reducir conflictos y riesgos laborales mediante estructuras claras",
+    "deliverable": "Definición de cargos, líneas de mando y soporte técnico disciplinario"
+  },
+  {
+    "number": "07",
+    "title": "Control, Seguimiento y Reportabilidad",
+    "objective": "Dar visibilidad real a la gerencia sobre el estado del contrato",
+    "deliverable": "Reportes semanales, seguimiento de KPIs y registro de desviaciones"
+  },
+  {
+    "number": "08",
+    "title": "Auditorías Internas y Preparación",
+    "objective": "Detectar brechas antes que el mandante o el auditor externo",
+    "deliverable": "Informe de hallazgos y plan de acciones correctivas"
+  }
+]

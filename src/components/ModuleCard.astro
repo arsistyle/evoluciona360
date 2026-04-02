@@ -1,0 +1,39 @@
+---
+import { useTranslations } from '../i18n/ui';
+
+interface Props {
+  lang: 'es' | 'en';
+  number: string;
+  title: string;
+  objective: string;
+  deliverable: string;
+}
+
+const { lang, number, title, objective, deliverable } = Astro.props;
+const t = useTranslations(lang);
+---
+
+<article class="group relative bg-blue-50/80 dark:bg-[#004d91]/10 border border-blue-200 dark:border-[#004d91]/30 hover:border-[#61b119]/50 p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-[#61b119]/10 rounded-xl">
+  <div class="absolute top-0 right-0 w-24 h-24 bg-[#61b119]/10 transform translate-x-8 -translate-y-8 group-hover:bg-[#61b119]/20 transition-all duration-300"></div>
+  
+  <div class="text-5xl font-bold text-[#61b119]/40 mb-4">
+    {number}
+  </div>
+  
+  <h3 class="text-xl font-bold text-neutral-900 dark:text-white mb-3 group-hover:text-[#61b119] transition-all duration-300">
+    {title}
+  </h3>
+  
+  <div class="space-y-3 mt-4 pt-4 border-t border-neutral-200 dark:border-neutral-700">
+    <div>
+      <span class="text-xs text-[#61b119] font-semibold uppercase tracking-wider">{t.modules.objective}</span>
+      <p class="text-neutral-600 dark:text-neutral-300 text-sm mt-1">{objective}</p>
+    </div>
+    <div>
+      <span class="text-xs text-[#f89c1d] font-semibold uppercase tracking-wider">{t.modules.deliverable}</span>
+      <p class="text-neutral-600 dark:text-neutral-300 text-sm mt-1">{deliverable}</p>
+    </div>
+  </div>
+  
+  <div class="absolute bottom-0 left-0 w-0 h-1 bg-[#61b119] group-hover:w-full transition-all duration-500 rounded-b"></div>
+</article>

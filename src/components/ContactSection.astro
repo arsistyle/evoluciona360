@@ -1,0 +1,83 @@
+---
+import { useTranslations } from '../i18n/ui';
+import Icon from "./Icon.astro";
+
+interface Props {
+  lang: 'es' | 'en';
+  contact: { name: string; phone: string; email: string; modalities: string[] };
+}
+
+const { lang, contact } = Astro.props;
+const t = useTranslations(lang);
+---
+
+<section id="contacto" class="relative py-32 overflow-hidden">
+  <div class="absolute inset-0">
+    <img
+      src="https://images.unsplash.com/photo-1423666639041-f56000c27a9a?w=1920&q=80"
+      alt="Contacto profesional"
+      class="w-full h-full object-cover"
+    />
+    <div class="absolute inset-0 bg-white/90 dark:bg-neutral-900/85"></div>
+  </div>
+
+  <div class="relative max-w-4xl mx-auto px-6 lg:px-8 w-full text-center">
+    <div
+      class="inline-flex items-center gap-2 text-[#61b119] font-semibold tracking-widest text-sm uppercase mb-6"
+    >
+      <span class="h-px w-8 bg-[#61b119]"></span>
+      {t.contact.tag}
+      <span class="h-px w-8 bg-[#61b119]"></span>
+    </div>
+
+    <h2
+      class="text-4xl md:text-6xl font-bold text-neutral-900 dark:text-white mb-6"
+    >
+      {t.contact.title.replace('<span>', '').replace('</span>', '')}
+    </h2>
+    <p
+      class="text-neutral-700 dark:text-neutral-200 text-xl mb-12 max-w-2xl mx-auto"
+    >
+      {t.contact.description}
+    </p>
+
+    <div class="flex flex-col sm:flex-row justify-center gap-6 mb-16">
+      <a
+        href={`tel:${contact.phone.replace(/\s/g, "")}`}
+        class="inline-flex items-center justify-center gap-3 bg-[#f89c1d] hover:bg-[#e08c0c] text-neutral-950 font-semibold text-base px-10 py-5 transition-all duration-300 hover:scale-105 shadow-lg shadow-[#f89c1d]/30 rounded-xl"
+      >
+        <Icon name="phone" size={24} />
+        {contact.phone}
+      </a>
+      <a
+        href={`mailto:${contact.email}`}
+        class="inline-flex items-center justify-center gap-3 bg-[#004d91] hover:bg-[#003366] text-white font-semibold text-base px-10 py-5 transition-all duration-300 hover:scale-105 shadow-lg shadow-[#004d91]/30 rounded-xl"
+      >
+        <Icon name="mail" size={24} />
+        {t.contact.cta}
+      </a>
+    </div>
+
+    <div
+      class="flex flex-col sm:flex-row justify-center items-center gap-8 text-neutral-600 dark:text-neutral-300 text-sm"
+    >
+      <span class="flex items-center gap-2">
+        <Icon name="clock" size={18} class="text-[#61b119]" />
+        {t.contact.responseTime}
+      </span>
+      <span class="flex items-center gap-2">
+        <Icon name="shield-check" size={18} class="text-[#61b119]" />
+        {t.contact.freeDiagnosis}
+      </span>
+    </div>
+
+    <div
+      class="mt-16 pt-12 border-t border-neutral-300 dark:border-neutral-700"
+    >
+      <p class="text-neutral-500 dark:text-neutral-400 mb-4">
+        {t.contact.contactPerson}
+      </p>
+      <p class="text-2xl font-bold text-[#61b119]">{contact.name}</p>
+    </div>
+  </div>
+</section>

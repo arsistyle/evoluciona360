@@ -1,0 +1,151 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-display: "Barlow Condensed", sans-serif;
+  --font-body: "Barlow", sans-serif;
+
+  /* Primary - Azul corporativo */
+  --color-primary-50: #f0f6fc;
+  --color-primary-100: #e0ecf9;
+  --color-primary-200: #c2d9f3;
+  --color-primary-300: #9fc0e9;
+  --color-primary-400: #759ddd;
+  --color-primary-500: #4d7dd1;
+  --color-primary-600: #3366bd;
+  --color-primary-700: #2951a6;
+  --color-primary-800: #004d91;
+  --color-primary-900: #003f78;
+  --color-primary-950: #002850;
+
+  /* Secondary - Verde operativo */
+  --color-secondary-50: #f2f9e8;
+  --color-secondary-100: #e2f2cb;
+  --color-secondary-200: #c5e697;
+  --color-secondary-300: #a4d55e;
+  --color-secondary-400: #85c22e;
+  --color-secondary-500: #61b119;
+  --color-secondary-600: #4e9914;
+  --color-secondary-700: #3d8010;
+  --color-secondary-800: #31670d;
+  --color-secondary-900: #28530b;
+  --color-secondary-950: #1c3d08;
+
+  /* Accent - Naranja acción */
+  --color-accent-50: #fef9f0;
+  --color-accent-100: #fcf0d9;
+  --color-accent-200: #f9deb2;
+  --color-accent-300: #f5c683;
+  --color-accent-400: #f0a749;
+  --color-accent-500: #f89c1d;
+  --color-accent-600: #e08c0c;
+  --color-accent-700: #b8710a;
+  --color-accent-800: #965c09;
+  --color-accent-900: #7a4c08;
+  --color-accent-950: #5a3706;
+
+  --color-dark: var(--dark);
+  --color-dark-foreground: var(--dark-foreground);
+  --color-primary: var(--color-primary-950);
+  --color-primary-foreground: #fff;
+  --color-secondary: var(--color-secondary-500);
+  --color-secondary-foreground: var(--color-secondary-50);
+  --color-tertiary: var(--color-tertiary-600);
+  --color-tertiary-foreground: var(--color-tertiary-50);
+  --color-success: var(--color-green-400);
+  --color-success-foreground: var(--color-green-50);
+  --color-warning: var(--color-warning);
+  --color-warning-foreground: var(--color-warning-foreground);
+  --color-error: var(--color-error);
+  --color-error-foreground: var(--color-error-foreground);
+  --color-info: var(--color-blue-600);
+  --color-info-foreground: var(--color-blue-50);
+
+  --text-5xl: clamp(2.5rem, 10vw, 3.5rem);
+  --text-4xl: clamp(2.25rem, 9vw, 3rem);
+  --text-3xl: clamp(2rem, 8vw, 2.5rem);
+  --text-2xl: clamp(1.75rem, 7vw, 2rem);
+  --text-xl: clamp(1.5rem, 6vw, 1.5rem);
+  --text-lg: clamp(1.2rem, 5vw, 1.25rem);
+  --text-md: clamp(1rem, 4vw, 1rem);
+  --text-sm: clamp(0.875rem, 4vw, 0.875rem);
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.145 0 0);
+}
+@layer base {
+  html {
+    padding-inline: var(--removed-body-scroll-bar-size);
+    scroll-behavior: smooth;
+  }
+  body {
+    font-family: var(--font-body);
+    @apply bg-white text-neutral-900 antialiased;
+  }
+
+  :global(.dark) body {
+    @apply bg-neutral-950 text-white;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-display);
+  }
+
+  ::selection {
+    background-color: var(--color-accent-500);
+    color: #0a0a0a;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.animate-delay-100 {
+  animation-delay: 100ms;
+}
+.animate-delay-200 {
+  animation-delay: 200ms;
+}
+.animate-delay-300 {
+  animation-delay: 300ms;
+}
+.animate-delay-400 {
+  animation-delay: 400ms;
+}

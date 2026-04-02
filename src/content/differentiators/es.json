@@ -1,0 +1,22 @@
+[
+  {
+    "icon": "auditable",
+    "title": "Enfoque Auditable",
+    "description": "Todo nuestro trabajo es defendible ante mandantes"
+  },
+  {
+    "icon": "no-bureaucracy",
+    "title": "Sin Burocracia",
+    "description": "No generamos documentos sin uso operativo real"
+  },
+  {
+    "icon": "integrated-vision",
+    "title": "Visión Integrada",
+    "description": "Unimos operación, prevención, RRHH y cumplimiento"
+  },
+  {
+    "icon": "practical-experience",
+    "title": "Experiencia Práctica",
+    "description": "Contamos con experiencia real en operación, faena y contratos exigentes"
+  }
+]

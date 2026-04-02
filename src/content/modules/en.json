@@ -1,0 +1,50 @@
+[
+  {
+    "number": "01",
+    "title": "Contract Startup Folder",
+    "objective": "Ensure a controlled startup aligned with the contract",
+    "deliverable": "Obligation matrix, risk assessment and initial work plan"
+  },
+  {
+    "number": "02",
+    "title": "Implementation & Standardization",
+    "objective": "Reduce operational variability and personnel dependency",
+    "deliverable": "Process map, POE procedures and standardized instructions"
+  },
+  {
+    "number": "03",
+    "title": "Vendor Evaluation & Management",
+    "objective": "Ensure critical vendors meet technical, legal and HSE requirements",
+    "deliverable": "Criticality ranking and auditable evaluation reports"
+  },
+  {
+    "number": "04",
+    "title": "ISO Management Systems (Operational Focus)",
+    "objective": "Strengthen ISO 9001, 45001 and 14001 systems without bureaucracy",
+    "deliverable": "Gap matrix and evidence for external audits"
+  },
+  {
+    "number": "05",
+    "title": "Integrated Risk Prevention",
+    "objective": "Move from paperwork prevention to field-applied prevention",
+    "deliverable": "Operative preventive system with clear HSE indicators"
+  },
+  {
+    "number": "06",
+    "title": "Workforce Management at Site",
+    "objective": "Reduce conflicts and labor risks through clear structures",
+    "deliverable": "Role definitions, command lines and disciplinary support"
+  },
+  {
+    "number": "07",
+    "title": "Control, Monitoring & Reporting",
+    "objective": "Give real visibility to management on contract status",
+    "deliverable": "Weekly reports, KPI tracking and deviation records"
+  },
+  {
+    "number": "08",
+    "title": "Internal Audits & Preparation",
+    "objective": "Detect gaps before the client or external auditor does",
+    "deliverable": "Findings report and corrective action plan"
+  }
+]

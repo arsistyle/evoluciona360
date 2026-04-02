@@ -1,0 +1,54 @@
+---
+import { useTranslations } from '../i18n/ui';
+import ModuleCard from "./ModuleCard.astro";
+
+interface Props {
+  lang: 'es' | 'en';
+  modules?: { number: string; title: string; objective: string; deliverable: string }[];
+}
+
+const { lang, modules } = Astro.props;
+const t = useTranslations(lang);
+const moduleList = modules || [];
+---
+
+<section
+  id="modulos"
+  class="relative py-32 overflow-hidden bg-white dark:bg-neutral-950"
+>
+  <div class="absolute inset-0 bg-blue-50/80 dark:bg-[#004d91]/10"></div>
+
+  <div class="relative max-w-7xl mx-auto px-6 lg:px-8 w-full">
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <span
+        class="inline-flex items-center gap-2 text-[#61b119] font-semibold tracking-widest text-sm uppercase mb-4"
+      >
+        <span class="h-px w-8 bg-[#61b119]"></span>
+        {t.modules.tag}
+        <span class="h-px w-8 bg-[#61b119]"></span>
+      </span>
+      <h2
+        class="text-4xl md:text-6xl font-bold text-neutral-900 dark:text-white mb-6"
+      >
+        <span class="text-[#61b119]">8</span> {lang === 'es' ? 'Módulos' : 'Modules'} {lang === 'es' ? 'de Servicio' : 'of Service'}
+      </h2>
+      <p class="text-neutral-600 dark:text-neutral-300 text-lg">
+        {t.modules.description}
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+      {
+        moduleList.map((modulo) => (
+          <ModuleCard
+            lang={lang}
+            number={modulo.number}
+            title={modulo.title}
+            objective={modulo.objective}
+            deliverable={modulo.deliverable}
+          />
+        ))
+      }
+    </div>
+  </div>
+</section>

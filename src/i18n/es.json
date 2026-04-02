@@ -1,0 +1,82 @@
+{
+  "nav": {
+    "porQue": "¿Por qué?",
+    "modulos": "Módulos",
+    "enfoque": "Enfoque",
+    "resultados": "Resultados",
+    "contacto": "Contacto"
+  },
+  "hero": {
+    "tagline": "Asesorías Gestión y Criterio",
+    "title": "Evoluciona360",
+    "subtitle": "Gestión Operativa, Control de Riesgos y Cumplimiento Normativo para la industria y minería",
+    "description": "Apoyamos a su empresa en la implementación, orden y control de procesos para reducir riesgos operacionales, humanos, contractuales y normativos.",
+    "cta": "Solicitar Diagnóstico Inicial",
+    "ctaSecondary": "Ver Módulos de Servicio",
+    "stats": {
+      "modules": "Módulos Integrales",
+      "auditable": "100% Auditable",
+      "burocracia": "0 Burocracia",
+      "cobertura": "100% Cobertura"
+    }
+  },
+  "why": {
+    "tag": "Diagnóstico",
+    "title": "¿Por qué nos necesita?",
+    "description": "Servicio diseñado para empresas que enfrentan desafíos críticos en gestión operacional y cumplimiento normativo.",
+    "painPoints": {
+      "01": "Operan con contratos exigentes",
+      "02": "Enfrentan auditorías internas, externas o de mandante",
+      "03": "Presentan una dependencia excesiva de personas clave",
+      "04": "Tienen brechas críticas entre la operación real y su documentación"
+    }
+  },
+  "modules": {
+    "tag": "Servicios",
+    "title": "Nuestros <span>8 Módulos</span> de Servicio",
+    "description": "Un enfoque integral para la transformación operacional de su empresa.",
+    "objective": "Objetivo",
+    "deliverable": "Entregable"
+  },
+  "differentiators": {
+    "tag": "Enfoque",
+    "title": "Lo que nos <span> Diferencia</span>",
+    "description": "Un enfoque práctico y auditable que genera valor real para su operación."
+  },
+  "results": {
+    "tag": "Impacto",
+    "title": "Resultados Esperados",
+    "description": "Transformación medible y sostenible para su organización.",
+    "efficiency": "+40% Eficiencia"
+  },
+  "contact": {
+    "tag": "Contacto",
+    "title": "¿Listo para <span>evolucionar</span>?",
+    "description": "Solicite un diagnóstico inicial sin costo y descubra cómo podemos transformar su gestión operacional.",
+    "cta": "Contactar por Email",
+    "ctaPhone": "Llamar ahora",
+    "responseTime": "Respuesta en 24h",
+    "freeDiagnosis": "Diagnóstico sin costo",
+    "contactPerson": "Habla directamente con"
+  },
+  "footer": {
+    "tagline": "Asesorías Gestión y Criterio",
+    "subtitle": "Gestión Operativa para la Industria y Minería",
+    "contactTitle": "Contacto",
+    "modalitiesTitle": "Modalidades",
+    "modalities": {
+      "service": "Servicio puntual",
+      "project": "Proyecto definido",
+      "monthly": "Acompañamiento mensual"
+    },
+    "copyright": "© 2026 Evoluciona360. Todos los derechos reservados.",
+    "footerNote": "Soluciones Integrales para la Industria"
+  },
+  "theme": {
+    "toggleAria": "Cambiar tema",
+    "langAria": "Seleccionar idioma"
+  },
+  "mobile": {
+    "menuAria": "Abrir menú"
+  }
+}

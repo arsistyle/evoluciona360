@@ -1,0 +1,70 @@
+---
+import { useTranslations } from '../i18n/ui';
+import Icon from "./Icon.astro";
+
+interface Props {
+  lang: 'es' | 'en';
+  differentiators: { icon: string; title: string; description: string }[];
+}
+
+const { lang, differentiators } = Astro.props;
+const t = useTranslations(lang);
+---
+
+<section id="enfoque" class="relative py-32 overflow-hidden">
+  <div class="absolute inset-0">
+    <img
+      src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=1920&q=80"
+      alt="Trabajo en equipo"
+      class="w-full h-full object-cover"
+    />
+    <div class="absolute inset-0 bg-white/90 dark:bg-neutral-900/85"></div>
+  </div>
+
+  <div class="relative max-w-7xl mx-auto px-6 lg:px-8 w-full">
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <span
+        class="inline-block text-[#61b119] font-semibold tracking-widest text-sm uppercase mb-4"
+      >
+        {t.differentiators.tag}
+      </span>
+      <h2
+        class="text-4xl md:text-5xl font-bold text-neutral-900 dark:text-white mb-6"
+      >
+        {t.differentiators.title.replace('<span>', '').replace('</span>', '')}
+      </h2>
+      <p class="text-neutral-700 dark:text-neutral-300 text-lg">
+        {t.differentiators.description}
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+      {
+        differentiators.map((item, index) => (
+          <div class="group relative bg-white/60 dark:bg-white/5 backdrop-blur-sm border border-blue-200 dark:border-[#004d91]/30 p-8 hover:border-[#61b119]/50 transition-all duration-300 rounded-xl shadow-sm">
+            <div class="absolute top-4 right-4 text-6xl font-bold text-neutral-300/30 dark:text-white/5">
+              {String(index + 1).padStart(2, "0")}
+            </div>
+
+            <div class="w-14 h-14 bg-[#61b119] flex items-center justify-center mb-6 rounded-xl shadow-lg shadow-[#61b119]/30">
+              <Icon
+                name={item.icon.toLowerCase()}
+                size={28}
+                stroke={2}
+                class="text-white"
+              />
+            </div>
+
+            <h3 class="text-xl font-bold text-neutral-900 dark:text-white mb-3">
+              {item.title}
+            </h3>
+
+            <p class="text-neutral-600 dark:text-neutral-300 text-sm leading-relaxed">
+              {item.description}
+            </p>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>

@@ -1,0 +1,82 @@
+{
+  "nav": {
+    "porQue": "Why",
+    "modulos": "Modules",
+    "enfoque": "Approach",
+    "resultados": "Results",
+    "contacto": "Contact"
+  },
+  "hero": {
+    "tagline": "Management Consulting & Criteria",
+    "title": "Evoluciona360",
+    "subtitle": "Operational Management, Risk Control and Regulatory Compliance for industry and mining",
+    "description": "We help your company implement, organize and control processes to reduce operational, human, contractual and regulatory risks.",
+    "cta": "Request Initial Assessment",
+    "ctaSecondary": "View Service Modules",
+    "stats": {
+      "modules": "Integral Modules",
+      "auditable": "100% Auditable",
+      "burocracia": "0 Bureaucracy",
+      "cobertura": "100% Coverage"
+    }
+  },
+  "why": {
+    "tag": "Assessment",
+    "title": "Why do you need us?",
+    "description": "Service designed for companies facing critical challenges in operational management and regulatory compliance.",
+    "painPoints": {
+      "01": "Operate under demanding contracts",
+      "02": "Face internal, external or client audits",
+      "03": "Have excessive dependence on key personnel",
+      "04": "Have critical gaps between actual operations and documentation"
+    }
+  },
+  "modules": {
+    "tag": "Services",
+    "title": "Our <span>8 Service Modules</span>",
+    "description": "A comprehensive approach for your company's operational transformation.",
+    "objective": "Objective",
+    "deliverable": "Deliverable"
+  },
+  "differentiators": {
+    "tag": "Approach",
+    "title": "What <span>Sets Us Apart</span>",
+    "description": "A practical and auditable approach that generates real value for your operations."
+  },
+  "results": {
+    "tag": "Impact",
+    "title": "Expected Results",
+    "description": "Measurable and sustainable transformation for your organization.",
+    "efficiency": "+40% Efficiency"
+  },
+  "contact": {
+    "tag": "Contact",
+    "title": "Ready to <span>evolve</span>?",
+    "description": "Request a free initial assessment and discover how we can transform your operational management.",
+    "cta": "Contact by Email",
+    "ctaPhone": "Call now",
+    "responseTime": "Response within 24h",
+    "freeDiagnosis": "Free assessment",
+    "contactPerson": "Speak directly with"
+  },
+  "footer": {
+    "tagline": "Management Consulting & Criteria",
+    "subtitle": "Operational Management for Industry and Mining",
+    "contactTitle": "Contact",
+    "modalitiesTitle": "Modalities",
+    "modalities": {
+      "service": "One-time service",
+      "project": "Defined project",
+      "monthly": "Monthly accompaniment"
+    },
+    "copyright": "© 2026 Evoluciona360. All rights reserved.",
+    "footerNote": "Integrated Solutions for Industry"
+  },
+  "theme": {
+    "toggleAria": "Toggle theme",
+    "langAria": "Select language"
+  },
+  "mobile": {
+    "menuAria": "Open menu"
+  }
+}

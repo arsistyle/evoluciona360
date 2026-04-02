@@ -1,0 +1,239 @@
+---
+import { useTranslations, languages } from "../i18n/ui";
+import Icon from "./Icon.astro";
+
+interface Props {
+  lang: "es" | "en";
+}
+
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+const currentPath = lang === 'es' ? '/' : `/${lang}`;
+---
+
+<header
+  id="header"
+  class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-transparent"
+>
+  <nav class="max-w-7xl mx-auto px-6 lg:px-8">
+    <div class="flex items-center justify-between h-20">
+      <a href={currentPath} class="flex items-center gap-2">
+        <span class="font-bold text-2xl tracking-tight">
+          <span class="text-neutral-900 dark:text-white">Evoluciona</span><span
+            class="text-[#61b119]">360</span
+          >
+        </span>
+      </a>
+
+      <div class="hidden xl:flex items-center gap-8">
+        <a
+          href={`${currentPath}#por-que`}
+          class="nav-link text-sm font-medium text-neutral-600 dark:text-neutral-300 hover:text-[#f89c1d] transition-colors"
+          data-section="por-que">{t.nav.porQue}</a
+        >
+        <a
+          href={`${currentPath}#modulos`}
+          class="nav-link text-sm font-medium text-neutral-600 dark:text-neutral-300 hover:text-[#f89c1d] transition-colors"
+          data-section="modulos">{t.nav.modulos}</a
+        >
+        <a
+          href={`${currentPath}#enfoque`}
+          class="nav-link text-sm font-medium text-neutral-600 dark:text-neutral-300 hover:text-[#f89c1d] transition-colors"
+          data-section="enfoque">{t.nav.enfoque}</a
+        >
+        <a
+          href={`${currentPath}#resultados`}
+          class="nav-link text-sm font-medium text-neutral-600 dark:text-neutral-300 hover:text-[#f89c1d] transition-colors"
+          data-section="resultados">{t.nav.resultados}</a
+        >
+        <a
+          href={`${currentPath}#contacto`}
+          class="nav-link text-sm font-medium text-neutral-600 dark:text-neutral-300 hover:text-[#f89c1d] transition-colors"
+          data-section="contacto">{t.nav.contacto}</a
+        >
+      </div>
+
+      <div class="flex items-center gap-4">
+        <div class="relative group">
+          <button
+            id="lang-toggle"
+            class="p-2 rounded-lg bg-neutral-100 dark:bg-white/10 hover:bg-neutral-200 dark:hover:bg-white/20 transition-colors text-neutral-900 dark:text-white flex items-center gap-2"
+            aria-label="Seleccionar idioma"
+          >
+            <Icon name="language" size={20} />
+            <span class="text-xs font-medium uppercase">{lang}</span>
+          </button>
+          <div
+            class="absolute right-0 top-full mt-2 w-32 bg-white dark:bg-neutral-900 rounded-lg shadow-xl border border-neutral-200 dark:border-neutral-700 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50"
+          >
+            {
+              Object.entries(languages).map(([code, name]) => (
+                <a
+                  href={code === 'es' ? '/' : `/${code}`}
+                  class={`block px-4 py-2 text-sm hover:bg-neutral-100 dark:hover:bg-white/10 transition-colors ${lang === code ? "text-[#61b119] font-semibold" : "text-neutral-600 dark:text-neutral-300"}`}
+                >
+                  {name}
+                </a>
+              ))
+            }
+          </div>
+        </div>
+
+        <button
+          id="theme-toggle"
+          class="p-2 rounded-lg bg-neutral-100 dark:bg-white/10 hover:bg-neutral-200 dark:hover:bg-white/20 transition-colors text-neutral-900 dark:text-white"
+          aria-label="Cambiar tema"
+        >
+          <Icon name="sun" size={20} class="hidden dark:block text-[#f89c1d]" />
+          <Icon
+            name="moon"
+            size={20}
+            class="block dark:hidden text-neutral-600"
+          />
+        </button>
+
+        <a
+          href={`${currentPath}#contacto`}
+          class="hidden xl:inline-flex items-center gap-2 bg-[#f89c1d] hover:bg-[#e08c0c] text-neutral-950 font-semibold text-sm px-5 py-2.5 transition-all duration-300 rounded-lg"
+        >
+          {lang === "es" ? "Solicitar Diagnóstico" : "Request Assessment"}
+        </a>
+
+        <button
+          id="mobile-menu-btn"
+          class="xl:hidden p-2 text-neutral-900 dark:text-white"
+          aria-label="Abrir menú"
+        >
+          <Icon name="menu-2" size={24} />
+        </button>
+      </div>
+    </div>
+
+    <div id="mobile-menu" class="hidden xl:hidden pb-6 text-center">
+      <div
+        class="flex flex-col gap-4 pt-4 border-t border-neutral-200 dark:border-white/10"
+      >
+        <a
+          href={`${currentPath}#por-que`}
+          class="nav-link text-sm font-medium text-neutral-600 dark:text-neutral-300 hover:text-[#f89c1d] transition-colors"
+          data-section="por-que"
+          >{t.nav.porQue}</a
+        >
+        <a
+          href={`${currentPath}#modulos`}
+          class="nav-link text-sm font-medium text-neutral-600 dark:text-neutral-300 hover:text-[#f89c1d] transition-colors"
+          data-section="modulos"
+          >{t.nav.modulos}</a
+        >
+        <a
+          href={`${currentPath}#enfoque`}
+          class="nav-link text-sm font-medium text-neutral-600 dark:text-neutral-300 hover:text-[#f89c1d] transition-colors"
+          data-section="enfoque"
+          >{t.nav.enfoque}</a
+        >
+        <a
+          href={`${currentPath}#resultados`}
+          class="nav-link text-sm font-medium text-neutral-600 dark:text-neutral-300 hover:text-[#f89c1d] transition-colors"
+          data-section="resultados"
+          >{t.nav.resultados}</a
+        >
+        <a
+          href={`${currentPath}#contacto`}
+          class="nav-link text-sm font-medium text-neutral-600 dark:text-neutral-300 hover:text-[#f89c1d] transition-colors"
+          data-section="contacto"
+          >{t.nav.contacto}</a
+        >
+      </div>
+    </div>
+  </nav>
+</header>
+
+<script is:inline>
+  (function () {
+    document.addEventListener("DOMContentLoaded", function () {
+      var themeToggle = document.getElementById("theme-toggle");
+      if (themeToggle) {
+        themeToggle.addEventListener("click", function () {
+          document.documentElement.classList.toggle("dark");
+          var isDark = document.documentElement.classList.contains("dark");
+          localStorage.setItem("theme", isDark ? "dark" : "light");
+        });
+      }
+
+      var header = document.getElementById("header");
+      window.addEventListener("scroll", function () {
+        if (header) {
+          if (window.pageYOffset > 50) {
+            header.classList.add(
+              "bg-white/95",
+              "dark:bg-neutral-950/95",
+              "backdrop-blur-lg",
+              "shadow-lg",
+            );
+            header.classList.remove("bg-transparent");
+          } else {
+            header.classList.remove(
+              "bg-white/95",
+              "dark:bg-neutral-950/95",
+              "backdrop-blur-lg",
+              "shadow-lg",
+            );
+            header.classList.add("bg-transparent");
+          }
+        }
+      });
+
+      var mobileMenuBtn = document.getElementById("mobile-menu-btn");
+      var mobileMenu = document.getElementById("mobile-menu");
+      var header = document.getElementById("header");
+      if (mobileMenuBtn && mobileMenu) {
+        mobileMenuBtn.addEventListener("click", function () {
+          mobileMenu.classList.toggle("hidden");
+          if (mobileMenu.classList.contains("hidden")) {
+            header.classList.remove(
+              "bg-white/95",
+              "dark:bg-neutral-950/95",
+              "shadow-lg",
+            );
+          } else {
+            header.classList.add(
+              "bg-white/95",
+              "dark:bg-neutral-950/95",
+              "shadow-lg",
+            );
+          }
+        });
+        var menuLinks = mobileMenu.querySelectorAll("a");
+        menuLinks.forEach(function (link) {
+          link.addEventListener("click", function () {
+            mobileMenu.classList.add("hidden");
+          });
+        });
+      }
+
+      var navLinks = document.querySelectorAll(".nav-link");
+      var sections = document.querySelectorAll("section[id]");
+
+      var observer = new IntersectionObserver(
+        function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              var id = entry.target.getAttribute("id");
+              navLinks.forEach(function (link) {
+                link.classList.remove("text-[#f89c1d]");
+                if (link.getAttribute("data-section") === id) {
+                  link.classList.add("text-[#f89c1d]");
+                }
+              });
+            }
+          });
+        },
+        { rootMargin: "-50% 0px -50% 0px" },
+      );
+
+      sections.forEach(function (section) {
+        observer.observe(section);
+      });
+    });
+  })();
+</script>

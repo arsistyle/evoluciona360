@@ -1,0 +1,91 @@
+---
+import { useTranslations } from '../i18n/ui';
+import Icon from "./Icon.astro";
+
+interface Props {
+  lang: 'es' | 'en';
+  contact: { name: string; phone: string; email: string; modalities: string[] };
+}
+
+const { lang, contact } = Astro.props;
+const t = useTranslations(lang);
+---
+
+<footer
+  class="relative py-16 bg-neutral-100 dark:bg-neutral-900 border-t border-neutral-200 dark:border-neutral-800"
+>
+  <div class="max-w-7xl mx-auto px-6 lg:px-8 w-full">
+    <div class="grid md:grid-cols-3 gap-12 mb-12">
+      <div>
+        <h3 class="text-2xl font-bold text-neutral-900 dark:text-white mb-2">
+          <span class="text-neutral-900 dark:text-white">Evoluciona</span><span
+            class="text-[#61b119]">360</span
+          >
+        </h3>
+        <p class="text-neutral-600 dark:text-neutral-300 text-sm">
+          {t.footer.tagline}
+        </p>
+        <p class="text-neutral-500 dark:text-neutral-400 text-sm mt-4">
+          {t.footer.subtitle}
+        </p>
+      </div>
+
+      <div>
+        <h4 class="text-lg font-semibold text-neutral-900 dark:text-white mb-4">
+          {t.footer.contactTitle}
+        </h4>
+        <div class="space-y-3">
+          <p class="text-neutral-600 dark:text-neutral-300 flex items-center gap-3">
+            <Icon name="user" size={20} class="text-[#61b119]" />
+            {contact.name}
+          </p>
+          <a
+            href={`tel:${contact.phone.replace(/\s/g, "")}`}
+            class="text-neutral-600 dark:text-neutral-300 hover:text-[#f89c1d] flex items-center gap-3 transition-colors"
+          >
+            <Icon name="phone" size={20} class="text-[#61b119]" />
+            {contact.phone}
+          </a>
+          <a
+            href={`mailto:${contact.email}`}
+            class="text-neutral-600 dark:text-neutral-300 hover:text-[#f89c1d] flex items-center gap-3 transition-colors"
+          >
+            <Icon name="mail" size={20} class="text-[#61b119]" />
+            {contact.email}
+          </a>
+        </div>
+      </div>
+
+      <div>
+        <h4 class="text-lg font-semibold text-neutral-900 dark:text-white mb-4">
+          {t.footer.modalitiesTitle}
+        </h4>
+        <ul class="space-y-2 text-neutral-600 dark:text-neutral-300 text-sm">
+          <li class="flex items-center gap-2">
+            <span class="w-2 h-2 bg-[#61b119] transform rotate-45 flex-shrink-0" />
+            {t.footer.modalities.service}
+          </li>
+          <li class="flex items-center gap-2">
+            <span class="w-2 h-2 bg-[#61b119] transform rotate-45 flex-shrink-0" />
+            {t.footer.modalities.project}
+          </li>
+          <li class="flex items-center gap-2">
+            <span class="w-2 h-2 bg-[#61b119] transform rotate-45 flex-shrink-0" />
+            {t.footer.modalities.monthly}
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div
+      class="pt-8 border-t border-neutral-200 dark:border-neutral-800 flex flex-col md:flex-row justify-between items-center gap-4"
+    >
+      <p class="text-neutral-500 dark:text-neutral-400 text-sm">
+        {t.footer.copyright}
+      </p>
+      <p class="text-neutral-400 dark:text-neutral-500 text-xs">
+        {t.footer.footerNote}
+      </p>
+    </div>
+  </div>
+</footer>
