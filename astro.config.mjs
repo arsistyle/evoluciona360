@@ -7,11 +7,14 @@ import react from '@astrojs/react';
 
 import astroIcon from 'astro-icon';
 
+import cloudflare from '@astrojs/cloudflare';
+
 // https://astro.build/config
 export default defineConfig({
   vite: {
     plugins: [tailwindcss()]
   },
 
-  integrations: [react(), astroIcon()]
+  integrations: [react(), astroIcon()],
+  adapter: cloudflare()
 });
